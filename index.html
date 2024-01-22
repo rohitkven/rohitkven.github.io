@@ -335,14 +335,7 @@ DIVIDE(SUM('products'[Product_Price])
 - 
 SUM('products'[Product_Cost]), SUM('products'[Product_Price]), 0)</code></pre>
 
-<pre><code> Inventory Turnover Rate = 
-	DIVIDE(
-		SUM('sales'[Units]), 
-		AVERAGEX(
-			VALUES('sales'[Product_ID]),
-			CALCULATE(SUM('inventory'[Stock_On_Hand]))
-		)
-	)</code></pre>
+<pre><code> Avg Order Value = DIVIDE([Total Sales], DISTINCTCOUNT('sales'[Sale_ID]), BLANK())</code></pre>
 
 								
 						
